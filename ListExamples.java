@@ -1,8 +1,17 @@
 import java.util.ArrayList;
 import java.util.List;
 
-interface StringChecker { boolean checkString(String s); }
+interface StringChecker { boolean checkString(String s);
 
+}
+class findY implements StringChecker{ 
+      public boolean checkString(String s){
+        if(s.contains(s))
+          return true;
+        else
+          return false;
+      }
+  }
 class ListExamples {
 
   // Returns a new list that has all the elements of the input list for which
@@ -33,6 +42,7 @@ class ListExamples {
         result.add(list2.get(index2));
         index2 += 1;
       }
+
     }
     while(index1 < list1.size()) {
       result.add(list1.get(index1));
@@ -40,7 +50,7 @@ class ListExamples {
     }
     while(index2 < list2.size()) {
       result.add(list2.get(index2));
-      index1 += 1;
+      index2 += 1;
     }
     return result;
   }
